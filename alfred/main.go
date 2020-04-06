@@ -189,9 +189,6 @@ func getPrefsDirectory() string {
 
 	version := getAlfredVersion()
 	prefSuffix := ""
-	if version != "2" && version != "4" {
-		prefSuffix = "-" + version
-	}
 
 	prefFile := path.Join(currentUser.HomeDir, "Library", "Preferences",
 		"com.runningwithcrayons.Alfred-Preferences"+prefSuffix+".plist")
@@ -230,9 +227,6 @@ func loadPreferences() (prefs alfred.Plist) {
 
 	version := getAlfredVersion()
 	prefSuffix := ""
-	if version != "2" {
-		prefSuffix = "-" + version
-	}
 
 	prefFile := path.Join(currentUser.HomeDir, "Library", "Preferences",
 		"com.runningwithcrayons.Alfred-Preferences"+prefSuffix+".plist")
